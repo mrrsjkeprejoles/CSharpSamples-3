@@ -1,0 +1,24 @@
+using System;
+
+namespace TimeConversion
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter the number of seconds: ");
+            double seconds = Convert.ToDouble(Console.ReadLine());
+
+            double minutes = seconds / 60;
+            double hours = minutes / 60;
+            double days = hours / 24;
+            double months = days / 30;
+
+            Console.WriteLine($"{seconds} seconds is equal to:");
+            Console.WriteLine($"{minutes:F2} minutes");
+            Console.WriteLine($"{hours:F2} hours");
+            Console.WriteLine($"{days:F2} days");
+            Console.WriteLine($"{months:F2} months");
+        }
+    }
+}
